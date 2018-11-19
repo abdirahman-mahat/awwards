@@ -1,0 +1,33 @@
+{% extends "base/layout.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+  <div class="login-bg text-white-50 row mx-0">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 my-5 px-5 ">
+      <div class="py-4">
+        <h4>
+          <span>Add your website to be reviwed by the best jury</span>
+        </h4>
+      </div>
+
+      <div class="errors">
+        {% if messages %}
+          {% for message in messages %}
+            <p class="alert alert-info">{{ message }}</p>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      <div class="login-form"></div>
+      <form action="{% url 'post_website' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form uploadform %}
+        <input type="submit" class="btn btn-outline-success" value="Upload">
+      </form>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+{% endblock content %}
