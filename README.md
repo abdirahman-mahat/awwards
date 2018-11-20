@@ -45,7 +45,7 @@ Users, can also move through the ranks by having their website voted as the site
 [specs](https://github.com/abdirahman-mahat/awwards/blob/master/spec.md)
 ## Set up instructions
 
-to start going through the images, simply click on this [link](https://awaards-manka.herokuapp.com/ "awards-manka.herokuapp.com") to visit the website, or click here to visit the [Git Hub](https://github.com/abdirahman-mahat/awards/) repository for the project.
+to start going through the images, simply click on this [link](https://awards-manka.herokuapp.com/ "awards-manka.herokuapp.com") to visit the website, or click here to visit the [Git Hub](https://github.com/abdirahman-mahat/awards/) repository for the project.
 ## Known Bugs
 there are no known bugs so far
 ## Copyright and license
