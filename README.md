@@ -18,6 +18,7 @@ Django framework has been used in the development of this project and the langua
 
 -   Javascript has been used to add to the ui experience by making things like popups when a user clicks on an image.
 
+
 ## Project Description
 
 This is a project where once the user logs in, they can submit a website and have other people rate it. They can also create their own profile and be able to rate other peoples websites and review them.
@@ -40,12 +41,14 @@ Users, can also move through the ranks by having their website voted as the site
 
 -   If the user searches for an item **that does not exist** they will be redirected to the homepage a a king message will be shown telling them what they did wrong
 
+## BDD
+[specs](https://github.com/abdirahman-mahat/awwards/blob/master/spec.md)
 ## Set up instructions
 
-to start going through the images, simply click on this [link](https://.herokuapp.com/ ".herokuapp.com") to visit the website, or click here to visit the [Git Hub](https://github.com/abdirahman-mahat/awards/) repository for the project.
+to start going through the images, simply click on this [link](https://awaards-manka.herokuapp.com/ "awards-manka.herokuapp.com") to visit the website, or click here to visit the [Git Hub](https://github.com/abdirahman-mahat/awards/) repository for the project.
 ## Known Bugs
 there are no known bugs so far
-## copyright and license
+## Copyright and license
 
 
 [Copyright@MoringaSchool]() 2018
