@@ -8,24 +8,24 @@ from .models import *
 
 class TestUser (TestCase):
     def setUp(self):
-        self.vikki = User(username='vikki', password='akisijui')
-        self.vikki.save()
+        self.manka = User(username='manka', password='akisijui')
+        self.manka.save()
 
     def tearDown(self):
         User.objects.all().delete()
 
     def test_instance(self):
-        self.assertEqual(self.vikki.username, 'vikki')
-        self.assertEqual(self.vikki.password, 'akisijui')
-        self.assertTrue(isinstance(self.vikki, User))
+        self.assertEqual(self.manka.username, 'manka')
+        self.assertEqual(self.manka.password, 'akisijui')
+        self.assertTrue(isinstance(self.manka, User))
 
 
 class TestUserProfile (TestCase):
     def setUp(self):
 
-        self.vikki = User(username='vikki', password='akisijui')
-        self.vikki.save()
-        self.lord_stark = Profile(user=self.vikki, Bio='i care')
+        self.manka = User(username='manka', password='akisijui')
+        self.manka.save()
+        self.lord_stark = Profile(user=self.manka, Bio='i care')
         self.lord_stark.save_profile()
 
     def tearDown(self):
@@ -41,17 +41,17 @@ class TestUserProfile (TestCase):
 
 class TestPost (TestCase):
     def setUp(self):
-        self.vikki = User(username='vikki', password='akisijui')
-        self.vikki.save()
-        self.waterfall = Post(uploaded_by=self.vikki, landing_image='test.jpg',
+        self.manka = User(username='manka', password='akisijui')
+        self.manka.save()
+        self.waterfall = Post(uploaded_by=self.manka, landing_image='test.jpg',
                               country='Kenya', post_date=datetime.utcnow())
-        self.waterfall.save_post(self.vikki)
+        self.waterfall.save_post(self.manka)
 
     def tearDown(self):
         Post.objects.all().delete()
 
     def test_instance(self):
-        self.assertEqual(self.waterfall.uploaded_by, self.vikki)
+        self.assertEqual(self.waterfall.uploaded_by, self.manka)
         self.assertEqual(self.waterfall.landing_image, 'test.jpg')
         self.assertEqual(self.waterfall.country, 'Kenya')
         self.assertTrue(isinstance(self.waterfall, Post))
@@ -64,10 +64,10 @@ class TestPost (TestCase):
 class TestComment (TestCase):
     def setUp(self):
 
-        self.vikki = User(username='vikki', password='akisijui')
-        self.vikki.save()
+        self.manka = User(username='manka', password='akisijui')
+        self.manka.save()
         self.comment = Comment(review='great')
-        self.comment.save(self.vikki)
+        self.comment.save(self.manka)
 
     def tearDown(self):
         Comment.objects.all().delete()
