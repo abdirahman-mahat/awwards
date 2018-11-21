@@ -14,7 +14,19 @@ from .permissions import IsAdminOrReadOnly
 # Create your views here.
 
 
-dntext = {
+def search_results(request):
+    # check if the input field exists and that ic contains data
+    if 'post' in request.GET and request.GET['post']:
+        # get the data from the search input field
+        explore_posts = Post.all_posts()
+        search_term = request.GET.get('post')
+        searched_posts = Post.filter_by_search_term(search_term)
+        print(search_term)
+        caption = f'Search results for {search_term}'
+
+        if len(searched_posts) == 0:
+            caption = f'Results for {search_term} Found'
+        search_context = {
             'posts': searched_posts,
             'explore_posts': explore_posts,
             'caption': caption,
